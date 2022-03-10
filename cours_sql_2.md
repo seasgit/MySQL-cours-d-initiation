@@ -100,20 +100,42 @@ VALUES
 -- FILM
 -- A ce stade, il est plus simple de passer par l'interface.
 ```
+#
+# D. Sélections multi tables
+Pour sélectionner de données qui se trouvent sur plusieurs tables, nous devons utiliser des requêtes avec de jointures qui font correspondre les clés étrangères avec des clé primaires.  
 
-# inner join vs left join
-## Deux tables 
-- membres (id, prenom,code_id)
-- affectation (id, code)
+__NB__ IL existe plusieurs façons. Voyons cela dans une autre base de données.  
+## Une base de test avec Deux tables
+Créez une base de données `db_membres` avec la relation entre les deux
+```bash
+Table Membre (id, prenom,code_id)
+Table Affectation (id, code)
+```
+
+Ce sera aussi l'occasion de voir une autre technique d'importation de données. 
+### Format CSV
+IL est possible de crééer le contenu à partir d'un tableur du type Excel.
+### Importer depuis un fichier csv
+`affectation.csv`
+
+![](./captures/affectation_csv.PNG)  
+
+
+`membre.csv`  
+
+![](./captures/membre_csv.PNG)
+
+
+## Jointures et Différences de résultat
 L'objectif est de récupérer les membres dont le code n'est pas nul.
-## left join
+### left join
 ```sql
- -- toutes les lignes de la table membres sont retournées, même s’il n’y a pas de correspondance dans la table affectation
+ -- toutes les lignes de la table membre sont retournées, même s’il n’y a pas de correspondance dans la table affectation
 SELECT 
     membres.prenom, affectation.code from membres 
     left join affectation on membres.code_id = affectation.id and affectation.code > 0
 ```
-## inner join
+### inner join
 ```sql
  -- toutes les lignes de la table membres sont retournées, même s’il n’y a pas de correspondante dans la table affectation
 SELECT 
