@@ -227,10 +227,17 @@ VALUES (null,'La prima cosa bella','Paolo Virzi','animation','2011-06-29','Japon
 UPDATE film SET genre='comédie', pays='Italie' WHERE id=18
 ```
 
-# Exercice en classe 
+# Exercice 1 en classe 
 - Créer une base de données d'une thématique de votre choix
 - Utiliser des requêtes SQL pour insérer, sélectionner , mettre à jour , effacer
 - Enregistrer chaque requête dans un fichier sql commenté.
 - Exporter la base de données dans un autre fichier sql
 - Placer les deux fichiers dans un dossier à votre nom_prenom
 - zipper le dossier et envoyez le à l'adresse suivante `contact.seasone@gmail.com`
+
+# Exercice 2 en classe
+- Même principe avec une thématiques sur les animaux. 
+- Exp : les félins : nom, race, pays, etc ...
+
+- Requetes SQL sans l'interface.
+- Que remarque t'on 

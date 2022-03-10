@@ -32,11 +32,13 @@ __nb:__ Majuscule, pas d'accents ni d'espaces.
 ## La table Genre
 Ici, la structure de la table Genre, pour l'exemple.
 
-![](./captures/table_genre.PNG)
+![](./captures/table_genre.PNG) 
+
+__NB__ Faites de même pour les autres tables
 
 ## La table Film
 
-En dernier, on crée la table film avec les champs qui vont pointer sur les clé primaires des autres tables _(clés étrangères)._
+En dernier, on crée la table film avec les champs qui vont pointer sur les clés primaires des autres tables _(clés étrangères)._
 
 ![](./captures/table_film_index.PNG)
 
@@ -51,10 +53,14 @@ de relier nos 2 tables.
 
 ![](./captures/fk_film_pays.PNG)
 
-ON constate maintenant sur la page de la structure  que notre champ `pays_id` est devenu un index.  
-Regardez aussi la ligne plus bas __indexes__ !
+On constate maintenant sur la page de la structure  que notre champ `pays_id` est devenu un index.  
+Regardez aussi la ligne plus bas, section : __indexes__ !
 
-![](./captures/structure_table_film_foreign_key.png)  
+![](./captures/structure_table_film_foreign_key.png) 
+
+Faites la même chose pour les autres champs index. On doit avoir comme résultat : 
+
+![](./captures/foreign_keys.PNG) 
 
 
 ## Insertion dans Pays
@@ -62,11 +68,38 @@ On insère deux pays pour vérifier la relation
 
 ![](./captures/insert_table_pays.PNG)
 
-## page d'insertion de Film maintenant.
-Ouvrez le sélecteur du champ `pays_id `et constatez   
+## Page d'insertion de Film maintenant.
+Ouvrez le sélecteur du champ `pays_id `et constatez !  
+On peut maintenant relier un pays à un film.  
 
 ![](./captures/field_pays_id.PNG)
 
+## Insérer les données
+Commencez par `Pays`, `Genre` et `Realisateur`, puis continuer avec `Film`
+
+```sql
+-- GENRE
+INSERT INTO 
+    genre (id,nom) 
+VALUES 
+    (null,'drame'), (null,'comédie'), (null,'western'), (null,'science fiction'), (null,'aventure'), (null,'animation')
+
+-- PAYS
+INSERT INTO 
+    pays (id,nom) 
+VALUES 
+    (null,'Japon'), (null,'France'), (null,'Espagne'), (null,'Etats Unis') 
+
+-- REALISATEUR  
+INSERT INTO 
+    realisateur (id, nom ) 
+VALUES 
+    (null, 'Emmanuelle Bercot'), (null,'Cédric Klapisch'), (null,'Quentin Tarantino'),
+    (null,'Pedro Almodovar'),(null,'Georges Lucas'), (null,'Hayao Miyazaki');
+
+-- FILM
+-- A ce stade, il est plus simple de passer par l'interface.
+```
 
 # inner join vs left join
 ## Deux tables 
