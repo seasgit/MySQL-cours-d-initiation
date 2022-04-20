@@ -142,3 +142,21 @@ SELECT
     membres.prenom, affectation.code from membres 
     inner join affectation on membres.code_id = affectation.id and affectation.code > 0
 ```
+## Sélection dans la base des films
+### Selection avec jointure de 2 tables
+```sql
+SELECT F.titre,F.sorti, P.nom from film F
+inner join pays P ON F.pays_id = P.id and P.nom = 'france' 
+```
+### Selection avec jointure 3 tables
+```sql
+SELECT 
+	F.titre,
+    F.sorti, 
+    P.nom,
+    R.nom 
+from film F
+inner join pays P ON F.pays_id = P.id 
+inner join realisateur R ON F.realisateur_id = R.id 
+and P.nom = 'france' 
+```
