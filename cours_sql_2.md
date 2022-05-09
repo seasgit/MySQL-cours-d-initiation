@@ -1,3 +1,5 @@
+
+#
 # A. Problèmes avec l'utilisation d'une table unique.
 - Redondances des données
 - Efficacité des requêtes
@@ -160,6 +162,7 @@ inner join pays P ON F.pays_id = P.id
 inner join realisateur R ON F.realisateur_id = R.id 
 and P.nom = 'france' 
 ```
+#
 # E. Exercice de groupe en classe
 ## Sujet
 - Vous définissez la base de données du thème de votre choix
@@ -171,14 +174,16 @@ and P.nom = 'france'
 ### Comment faire ?
 - Depuis PhpMyAdmin, il est possible d'imprimer en pdf structures, requêtes et résultats.  
 - Exemple avec la table film. En dessous la liste des film, on trouve une série de liens, 
-#### Premier __print__
+### Premier __print__
 ![](./captures/bouton_print.PNG)
-#### deuxième __print__
+### deuxième __print__
 - Pour enregistrer ay format pdf
 
 ![](./captures/print_select_film.PNG)
 
-#### Exemple de SELECT
+### Exemple de SELECT
 ![](./captures/print_request_select.PNG)
+
+
 Cliquez sur le bouton print pour enregistrer le tout en pdf
 
