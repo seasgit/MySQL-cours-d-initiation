@@ -167,7 +167,7 @@ and P.nom = 'france'
 ## Contraintes SQL
 - Au moins deux tables reliées par des clé étrangères
 ## Type de rendu
-- Un document pdf combinant présentation et différentes phases de construction et requêtes
+- ici, pas de fichiers sql, mais un document pdf combinant une présentation et différentes phases de construction, relation et requêtes
 ### Comment faire ?
 - Depuis PhpMyAdmin, il est possible d'imprimer en pdf structures, requêtes et résultats.  
 - Exemple avec la table film. En dessous la liste des film, on trouve une série de liens, 
@@ -180,4 +180,5 @@ and P.nom = 'france'
 
 #### Exemple de SELECT
 ![](./captures/print_request_select.PNG)
+Cliquez sur le bouton print pour enregistrer le tout en pdf
 
